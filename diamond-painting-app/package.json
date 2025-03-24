@@ -9,10 +9,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/cropperjs": "^1.1.5",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "pixi.js": "^8.9.0"
+    "@pixi/extract": "^7.4.3",
+    "cropperjs": "^1.6.1",
+    "fontfaceobserver": "^2.3.0",
+    "pixi.js": "^7.4.3"
   }
 }

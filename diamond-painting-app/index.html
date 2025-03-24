@@ -1,13 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Painting App</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/assets/cropper.css">
+</head>
+<body>
+  <div class="main-layout">
+    <div id="container"></div>
+    <div class="sidebar">
+      <div id="legend"></div>
+      <div id="imagePreview" style="display: none;">
+        <img id="previewImage" alt="Image Preview">
+        <div id="cropControls">
+          <button id="cropBtn">Crop Image</button>
+          <button id="cancelCropBtn">Cancel</button>
+        </div>
+      </div>
+      <input type="file" id="imageInput" accept="image/*">
+      <button id="generateBtn">Generate Pattern</button>
+      <button id="downloadBtn">Download Pattern</button>
+      <button id="zoomInBtn">Zoom In</button>
+      <button id="zoomOutBtn">Zoom Out</button>
+    </div>
+  </div>
+  <script type="module" src="/src/scripts/main.ts"></script>
+</body>
 </html>
