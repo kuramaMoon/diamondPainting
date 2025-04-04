@@ -35,30 +35,9 @@ export function showLegend(colorMap: ColorMap): void {
 }
 
 export function downloadCanvas(app: PIXI.Application): void {
-  // Ensure the stage is visible
-  app.stage.visible = true;
-
-  // Force a render to ensure the canvas is up-to-date
-  app.renderer.render(app.stage);
-
-  // Use the renderer's view (canvas) to capture the content
   const canvas = app.view as HTMLCanvasElement;
-
-  // Convert the canvas to a data URL
-  let dataURL: string;
-  try {
-    dataURL = canvas.toDataURL('image/png');
-  } catch (error) {
-    console.error('Error converting canvas to data URL:', error);
-    alert('Failed to download image. Check the console for details.');
-    return;
-  }
-
-  // Create a downloadable link
   const link = document.createElement('a');
   link.download = 'diamond-painting-pattern.png';
-  link.href = dataURL;
-  document.body.appendChild(link);
+  link.href = canvas.toDataURL('image/png');
   link.click();
-  document.body.removeChild(link);
 }
