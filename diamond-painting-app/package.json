@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@types/cropperjs": "^1.1.5",
+    "gh-pages": "^6.3.0",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   },
