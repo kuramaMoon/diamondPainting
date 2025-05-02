@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Painting App</title>
+  <link rel="stylesheet" href="/src/assets/cropper.css">
+  <script type="module" crossorigin src="/diamondPainting/assets/index-BXTNvwo7.js"></script>
+  <link rel="stylesheet" crossorigin href="/diamondPainting/assets/index-CFTahrYh.css">
+</head>
+<body>
+  <div class="main-layout">
+    <div id="toolbox" class="toolbox">
+      <button id="lassoToolBtn" class="tool-btn" title="Lasso Tool">
+        <span>🖱️ Lasso</span>
+      </button>
+      <button id="cleverSelectBtn" class="tool-btn" title="Clever Select Tool">
+        <span>🎯 Clever Select</span>
+      </button>
+      <div id="lassoActions" class="lasso-actions" style="display: none;">
+        <button id="removeNumbersBtn">Remove Numbers</button>
+        <button id="addNumbersBtn">Add Numbers</button>
+      </div>
+    </div>
+
+    <div id="container"></div>
+    <div class="sidebar">
+      <div id="legend"></div>
+      <div id="imagePreview" style="display: none;">
+        <img id="previewImage" alt="Image Preview">
+        <div id="cropControls">
+          <button id="cropBtn">Crop Image</button>
+          <button id="cancelCropBtn">Cancel</button>
+        </div>
+      </div>
+      <div class="file-input-container">
+        <label for="imageInput" class="file-input-label">Choose an Image</label>
+        <input type="file" id="imageInput" accept="image/*">
+      </div>
+      <button id="generateBtn">Generate Pattern</button>
+      <button id="downloadBtn">Download Pattern</button>
+      <button id="zoomInBtn">Zoom In</button>
+      <button id="zoomOutBtn">Zoom Out</button>
+      <button id="resetViewBtn">Reset View</button> <!-- Added -->
+      <span id="zoomLevel">Zoom: 100%</span> <!-- Added -->
+      <div id="loadingIndicator" class="hidden">Loading...</div>
+    </div>
+  </div>
+</body>
+</html>
